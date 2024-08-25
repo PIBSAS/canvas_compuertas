@@ -9,7 +9,7 @@ Código canvas que dibuja las compuertas.
     const canvas = document.getElementById('COMPUERTA');
     const ctx = canvas.getContext('2d');
 	
-	// EXPANDIR LIENZO SEGUN PANTALLA
+// EXPANDIR LIENZO SEGUN PANTALLA
     canvas.width = window.innerWidth * window.devicePixelRatio;
     canvas.height = window.innerHeight * window.devicePixelRatio;
     ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
@@ -20,7 +20,7 @@ Código canvas que dibuja las compuertas.
 
 # IF:
 ````bash
-  ctx.lineWidth = ANCHO DE LINEA EN PX;
+  	ctx.lineWidth = ANCHO DE LINEA EN PX;
 	ctx.strokeStyle = '#000000';
 	
 	//BASE
@@ -42,7 +42,6 @@ Código canvas que dibuja las compuertas.
 	ctx.moveTo(X, Y);
 	ctx.lineTo(X, Y);
 	ctx.stroke();
-</script>
 ````
 	
 # COMPUERTA NOT:
@@ -59,9 +58,9 @@ Código canvas que dibuja las compuertas.
 	ctx.stroke();
 	
 	// NOT
-    ctx.beginPath();
-    ctx.arc(105, 630, 5, 0, 2 * Math.PI);
-    ctx.stroke()
+   	ctx.beginPath();
+    	ctx.arc(105, 630, 5, 0, 2 * Math.PI); //X ,Y, RADIO, ANGULO INICIAL, ANGULO FINAL
+   	ctx.stroke()
 	
 	//Z 
 	ctx.beginPath();
@@ -79,16 +78,16 @@ Código canvas que dibuja las compuertas.
 # COMPUERTA AND:
 ````bash
 	ctx.lineWidth = 2;
-    ctx.strokeStyle = '#000000';
+    	ctx.strokeStyle = '#000000';
 	// BASE
 	ctx.beginPath();
-    ctx.moveTo(60, 390);
-    ctx.lineTo(60, 450);
+    	ctx.moveTo(60, 390);
+    	ctx.lineTo(60, 450);
 	ctx.lineTo(90, 450);
 	ctx.moveTo(60, 390);
 	ctx.lineTo(90, 390);
 	ctx.arc(90, 420, 30, 1.5*Math.PI, 0.5*Math.PI);
-    ctx.stroke();
+    	ctx.stroke();
 	
 	// entradas
 	ctx.beginPath();
@@ -108,16 +107,16 @@ Código canvas que dibuja las compuertas.
 # COMPUERTA NAND:
 ````bash
 	ctx.lineWidth = 2;
-    ctx.strokeStyle = '#000000';
+    	ctx.strokeStyle = '#000000';
 	// BASE
 	ctx.beginPath();
-    ctx.moveTo(60, 470);
-    ctx.lineTo(60, 530);
+    	ctx.moveTo(60, 470);
+    	ctx.lineTo(60, 530);
 	ctx.lineTo(90, 530);
 	ctx.moveTo(60, 470);
 	ctx.lineTo(90, 470);
 	ctx.arc(90, 500, 30, 1.5*Math.PI, 0.5*Math.PI);
-    ctx.stroke();
+    	ctx.stroke();
 	
 	// entradas
 	ctx.beginPath();
@@ -128,9 +127,9 @@ Código canvas que dibuja las compuertas.
 	ctx.stroke();
 	
 	// NOT
-    ctx.beginPath();
-    ctx.arc(125, 500, 5, 0, 2 * Math.PI);
-    ctx.stroke();
+    	ctx.beginPath();
+    	ctx.arc(125, 500, 5, 0, 2 * Math.PI);
+    	ctx.stroke();
 	
 	//Z 
 	ctx.beginPath();
@@ -146,9 +145,9 @@ Código canvas que dibuja las compuertas.
 
 //  ARCOS
     ctx.beginPath();
-    ctx.moveTo(60, 230);
-    ctx.quadraticCurveTo(100, 260, 60, 290);
-    ctx.stroke();
+    ctx.moveTo(60, 230); //PUNTO DE INCIO DE CURVA, X, Y
+    ctx.quadraticCurveTo(100, 260, 60, 290); // PUNTO DE CONTROL X, Y, PUNTO DE FINALIZACION DE CURVA X, Y
+    ctx.stroke(); // TRAZAR
 
 // PERFILES
     ctx.beginPath();
@@ -162,8 +161,8 @@ Código canvas que dibuja las compuertas.
     ctx.beginPath();
     ctx.moveTo(80, 230);
     ctx.quadraticCurveTo(110, 230, 130, 260);
-	ctx.moveTo(80, 290)
-	ctx.quadraticCurveTo(110,290, 130,260);
+    ctx.moveTo(80, 290)
+    ctx.quadraticCurveTo(110,290, 130,260);
     ctx.stroke();
 
 // Z
@@ -204,8 +203,8 @@ Código canvas que dibuja las compuertas.
     ctx.beginPath();
     ctx.moveTo(80, 310);
     ctx.quadraticCurveTo(110, 310, 130, 340);
-	ctx.moveTo(80, 370)
-	ctx.quadraticCurveTo(110,370, 130,340);
+    ctx.moveTo(80, 370)
+    ctx.quadraticCurveTo(110,370, 130,340);
     ctx.stroke();
 
 // NOT
@@ -213,7 +212,6 @@ Código canvas que dibuja las compuertas.
     ctx.arc(135, 340, 5, 0, 2 * Math.PI);
     ctx.stroke();
 	
-
 // Z
     ctx.beginPath();
     ctx.moveTo(140, 340);
@@ -254,8 +252,8 @@ Código canvas que dibuja las compuertas.
     ctx.beginPath();
     ctx.moveTo(80, 150);
     ctx.quadraticCurveTo(110, 150, 130, 180);
-	ctx.moveTo(80, 210)
-	ctx.quadraticCurveTo(110,210, 130,180);
+    ctx.moveTo(80, 210)
+    ctx.quadraticCurveTo(110,210, 130,180);
     ctx.stroke();
 
 // Z
@@ -298,8 +296,8 @@ Código canvas que dibuja las compuertas.
     ctx.beginPath();
     ctx.moveTo(80, 70);
     ctx.quadraticCurveTo(110, 70, 130, 100);
-	ctx.moveTo(80, 130)
-	ctx.quadraticCurveTo(110,130, 130,100);
+    ctx.moveTo(80, 130)
+    ctx.quadraticCurveTo(110,130, 130,100);
     ctx.stroke();
 // NOT
     ctx.beginPath();
@@ -319,4 +317,4 @@ Código canvas que dibuja las compuertas.
     ctx.moveTo(30, 120);
     ctx.lineTo(65, 120);
     ctx.stroke();
-	````
+````
